@@ -173,8 +173,10 @@ main h1 {
     font-size: 55px;
     margin: 0 30px 5px 0;
     color: transparent;
-    -webkit-text-stroke: .05px var(--theme-black);
-    filter: drop-shadow(0 1.5px 1px rgba(41, 47, 54, .8));
+    -webkit-text-stroke-color: var(--theme-black);
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    filter: drop-shadow(0 .5px 1px rgba(41, 47, 54, .8));
     letter-spacing: 1px;
 }
 
@@ -519,7 +521,9 @@ footer ol li a:hover + span {
         font-size: 38px;
         filter: drop-shadow(0 1px 1px rgba(41, 47, 54, .6));
         color: var(--theme-black);
-        -webkit-text-stroke: 0;
+        -webkit-text-stroke-color: transparent;
+        -webkit-text-fill-color: var(--theme-black);
+        -webkit-text-stroke-width: 0;
     }
 }
 
