@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bs-primary: #7139e1;
+    --bs-primary-hover: #844fef;
+}
+
+::-moz-selection {
+    color: var(--bs-white);
+    background: var(--bs-primary);
+}
+
+::selection {
+    color: var(--bs-white);
+    background: var(--bs-primary);
+}
+
+html, body {height: 100%}
+body {display: grid}
+
+.wrapper {
+    max-width: 700px;
+    min-width: 600px;
+    margin: auto;
+    position: relative;
+    padding: 40px 30px 30px;
+    border-radius: 16px;
+}
+
+#theTitle {
+    border-bottom: 1px solid rgba(0,0,0,.05);
+    padding: 0 15px 17px;
+}
+
+#result {
+    position: absolute;
+    padding: 0 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 120px;
+    visibility: visible;
+    opacity: 1;
+    transition: all .3s ease;
+}
+
+#result.result-out {
+    visibility: hidden;
+    opacity: 0;
+    top: 130px;
+}
+
+#div-alert {
+    position: absolute;
+    top: 90px;
+    left: 30px;
+    width: calc(100% - 60px);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .15s ease;
+}
+
+#div-alert.alerted {
+    top: 105px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.wrapper form .btn-primary {
+    --bs-btn-bg: var(--bs-primary);
+    --bs-btn-hover-bg: var(--bs-primary-hover);
+    --bs-btn-active-bg: var(--bs-primary-hover);
+    --bs-btn-border-color: var(--bs-primary);
+    --bs-btn-active-border-color: var(--bs-primary);
+    --bs-btn-hover-border-color: var(--bs-primary-hover);
+    --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(113, 57, 225, .5);
+}
+
+.wrapper form .form-control:focus,
+.wrapper form .form-select:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.25rem rgba(113, 57, 225,.25);
+}
+
+@media(max-width: 790px) {
+    .wrapper {
+        max-width: 100%;
+        min-width: calc(100% - 30px);
+        padding: 30px 15px 15px;
+    }
+
+    #result {top: 100px;}
+    #div-alert {
+        left: 15px;
+        width: calc(100% - 30px);
+        padding: 0.5rem;
+    }
+    #div-alert.alerted {
+        top: 80px;
+    }
+}

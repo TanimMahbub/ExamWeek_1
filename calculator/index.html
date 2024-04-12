@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- style.css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- wrapper start -->
+    <div class="wrapper bg-light-subtle shadow border-2 border-dark border-opacity-10 border">
+        
+        <!-- form title -->
+        <h1 class="text-center fw-bold text-break mb-5" id="theTitle">Let's Calculate!</h1>
+        <!-- form result -->
+        <p class="text-success fw-bold h1 result-out" id="result"></p>
+        
+        <!-- error message start -->
+        <div class="alert alert-warning" id="div-alert" role="alert">
+            <span id="alertMsg"></span>
+        </div>
+        <!-- error message end -->
+
+        <!-- form start -->
+        <form class="row flex-column g-3 needs-validation mt-1">
+            <!-- first number start -->
+            <div class="col-12 position-relative">
+                <label for="num-x" class="form-label">First Number</label>
+                <input type="text" class="form-control" id="num-x" required>
+            </div>
+            <!-- first number end -->
+
+            <!-- Operator list start -->
+            <div class="col-12 position-relative mb-2 mt-3 mb-lg-3 mt-lg-4">
+                <label for="calcOp" class="form-label">Operation</label>
+                <select class="form-select" id="calcOp" required>
+                    <option selected disabled value="">Choose an operator</option>
+                    <option value="+">Addition ( + )</option>
+                    <option value="-">Subtraction ( - )</option>
+                    <option value="*">Multiplication ( * )</option>
+                    <option value="/">Division ( / )</option>
+                </select>
+            </div>
+            <!-- Operator list end -->
+
+            <!-- second number start -->
+            <div class="col-12 position-relative">
+                <label for="num-y" class="form-label">Second Number</label>
+                <input type="text" class="form-control" id="num-y" required>
+            </div>
+            <!-- second number end -->
+
+            <!-- form buttons start -->
+            <div class="col-12 d-flex justify-content-between">
+                <button class="btn btn-primary btn-lg rounded" type="button" id="calc">Calculate</button>
+                <button class="btn btn-secondary btn-lg rounded" type="button" id="resetForm" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Reset the Calculator">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"/>
+                        <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466"/>
+                    </svg>
+                </button>
+            </div>
+            <!-- form buttons end -->
+        </form>
+        <!-- form end -->
+    </div>
+    <!-- wrapper end -->
+    
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- main js -->
+    <script src="main.js"></script>
+</body>
+</html>
