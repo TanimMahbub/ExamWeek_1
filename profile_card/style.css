@@ -36,13 +36,11 @@ ul,ol, li {list-style-type: none;}
 ::-moz-selection {
     color: #fff;
     background: var(--theme-black);
-    -webkit-text-stroke: 0px;
 }
 
 ::selection {
     color: #fff;
     background: var(--theme-black);
-    -webkit-text-stroke: 0px;
 }
 
 body {
@@ -175,9 +173,21 @@ main h1 {
     color: transparent;
     -webkit-text-stroke-color: var(--theme-black);
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 1px;
-    filter: drop-shadow(0 .5px 1px rgba(41, 47, 54, .8));
+    -webkit-text-stroke-width: .5px;
+    filter: drop-shadow(0 1px 1px rgba(41, 47, 54, .8));
     letter-spacing: 1px;
+}
+
+main h1::selection {
+    color: transparent;
+    background: var(--theme-black);
+    -webkit-text-stroke-color: #fff;
+    -webkit-text-fill-color: var(--theme-black);
+}
+
+main h1::-moz-selection {
+    color: #fff;
+    background: var(--theme-black);
 }
 
 main h3 {
